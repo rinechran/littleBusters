@@ -24,6 +24,9 @@
     <ClCompile Include="KUD\Network\Socket.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="KUD\Mysql\Mysql.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="KUD\Network\Utility\Patton\Singleton.hpp">
@@ -38,7 +41,7 @@
     <ClInclude Include="KUD\Network\Socket.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="KUD\Mysql\Mysql.hpp">
+    <ClInclude Include="KUD\Mysql\Mysql.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
