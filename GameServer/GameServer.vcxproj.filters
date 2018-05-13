@@ -44,5 +44,8 @@
     <ClInclude Include="KUD\Mysql\Mysql.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="KUD\Debug\Debug.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

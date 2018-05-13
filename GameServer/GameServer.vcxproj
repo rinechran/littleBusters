@@ -105,6 +105,10 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -141,6 +145,7 @@
     <ClCompile Include="KUD\Network\Socket.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="KUD\Debug\Debug.h" />
     <ClInclude Include="KUD\Mysql\Mysql.h" />
     <ClInclude Include="KUD\Network\EndPoint.h" />
     <ClInclude Include="KUD\Network\Utility\Patton\Singleton.hpp" />

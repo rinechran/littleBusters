@@ -10,14 +10,7 @@
 
 namespace KUD {
 	namespace MYSQL {
-		enum class ErrorCode
-		{
-			CONNECTED,
-			NOT_CONNECT,
-			CONNERCT_ERROR,
-			QUERY_SUCCESS,
-			QUERY_FAIL
-		};
+
 		struct ImPort
 		{
 			ImPort();
@@ -56,6 +49,14 @@ namespace KUD {
 			ImPort port;
 			ImSocket socket;
 			ImFlog flog;
+		};
+		enum class ErrorCode
+		{
+			CONNECTED,
+			NOT_CONNECT,
+			CONNERCT_ERROR,
+			QUERY_SUCCESS,
+			QUERY_FAIL
 		};
 
 		class Mysql {
