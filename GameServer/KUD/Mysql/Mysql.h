@@ -11,28 +11,28 @@
 namespace KUD {
 	namespace MYSQL {
 
-		struct ImPort
+		struct ImplePort
 		{
-			ImPort();
+			ImplePort();
 		
-			ImPort(unsigned int othPort);
+			ImplePort(unsigned int othPort);
 			operator int() { return port; }
 		private:
 			unsigned int port;
 		};
 
-		struct ImFlog
+		struct impleFlog
 		{
-			ImFlog();
-			ImFlog(unsigned int othFlog);
+			impleFlog();
+			impleFlog(unsigned int othFlog);
 			operator unsigned int() { return flog; }
 		private:
 			unsigned long flog;
 		};
-		struct ImSocket
+		struct impleSocket
 		{
-			ImSocket();
-			ImSocket(const char * othFlog);
+			impleSocket();
+			impleSocket(const char * othFlog);
 			operator const char*() { return sock; }
 		private:
 			const char * sock;
@@ -46,9 +46,9 @@ namespace KUD {
 			std::string id;
 			std::string passwd;
 			std::string database;
-			ImPort port;
-			ImSocket socket;
-			ImFlog flog;
+			ImplePort port;
+			impleSocket socket;
+			impleFlog flog;
 		};
 		enum class ErrorCode
 		{
@@ -67,9 +67,9 @@ namespace KUD {
 				virtual ~Mysql();
 		private:
 			void ConnectMove(ConnetSetting &&oth);
-			::MYSQL * _Connector;
-			bool _IsSetting;
-			ConnetSetting _Setting;
+			::MYSQL * _connector;
+			bool _isSetting;
+			ConnetSetting _setting;
 		};
 
 		/*

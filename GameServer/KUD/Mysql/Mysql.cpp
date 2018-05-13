@@ -7,34 +7,34 @@ std::unordered_map<KUD::MYSQL::ErrorCode, std::string> KUD::MYSQL::ErrorCodeStri
 	{ KUD::MYSQL::ErrorCode::CONNERCT_ERROR ,"CONNERCT_ERROR" }
 };
 
-KUD::MYSQL::ImPort::ImPort() : port(3306) {}
+KUD::MYSQL::ImplePort::ImplePort() : port(3306) {}
 
-KUD::MYSQL::ImPort::ImPort(unsigned int othPort) : port(othPort) {}
+KUD::MYSQL::ImplePort::ImplePort(unsigned int othPort) : port(othPort) {}
 
-KUD::MYSQL::ImFlog::ImFlog() : flog(0) {}
+KUD::MYSQL::impleFlog::impleFlog() : flog(0) {}
 
-KUD::MYSQL::ImFlog::ImFlog(unsigned int othFlog) : flog(othFlog) {}
+KUD::MYSQL::impleFlog::impleFlog(unsigned int othFlog) : flog(othFlog) {}
 
-KUD::MYSQL::ImSocket::ImSocket() : sock(nullptr) {}
+KUD::MYSQL::impleSocket::impleSocket() : sock(nullptr) {}
 
-KUD::MYSQL::ImSocket::ImSocket(const char * othFlog) : sock(othFlog) {}
+KUD::MYSQL::impleSocket::impleSocket(const char * othFlog) : sock(othFlog) {}
 
-KUD::MYSQL::Mysql::Mysql() : _IsSetting(false) {
-	if (!_IsSetting) {
-		_IsSetting = mysql_init(nullptr);
+KUD::MYSQL::Mysql::Mysql() : _isSetting(false) {
+	if (!_isSetting) {
+		_isSetting = mysql_init(nullptr);
 	}
 }
 
 KUD::MYSQL::ErrorCode KUD::MYSQL::Mysql::connect(ConnetSetting setting) {
-	_Setting = setting;
+	_setting = setting;
 	ConnectMove(std::move(setting));
-	if (!_IsSetting) {
+	if (!_isSetting) {
 		return ErrorCode::NOT_CONNECT;
 	}
 
-	auto isResult = mysql_real_connect(_Connector, _Setting.host.c_str(), _Setting.id.c_str()
-		, _Setting.passwd.c_str(), _Setting.database.c_str(), _Setting.port
-		, _Setting.socket, _Setting.flog);
+	auto isResult = mysql_real_connect(_connector, _setting.host.c_str(), _setting.id.c_str()
+		, _setting.passwd.c_str(), _setting.database.c_str(), _setting.port
+		, _setting.socket, _setting.flog);
 
 	if (!isResult) {
 		return ErrorCode::CONNERCT_ERROR;
@@ -43,7 +43,7 @@ KUD::MYSQL::ErrorCode KUD::MYSQL::Mysql::connect(ConnetSetting setting) {
 }
 
 KUD::MYSQL::ErrorCode KUD::MYSQL::Mysql::mysql_query(std::string & query) {
-	auto i = ::mysql_query(_Connector, query.c_str());
+	auto i = ::mysql_query(_connector, query.c_str());
 	if (i == 0) {
 		return ErrorCode::QUERY_SUCCESS;
 	}
@@ -51,18 +51,18 @@ KUD::MYSQL::ErrorCode KUD::MYSQL::Mysql::mysql_query(std::string & query) {
 }
 
 KUD::MYSQL::Mysql::~Mysql() {
-	if (_IsSetting) {
-		mysql_close(_Connector);
+	if (_isSetting) {
+		mysql_close(_connector);
 	}
 }
 
 void KUD::MYSQL::Mysql::ConnectMove(ConnetSetting && oth) {
-	_Setting.host = std::move(oth.host);
-	_Setting.id = std::move(oth.id);
-	_Setting.passwd = std::move(oth.passwd);
-	_Setting.port = oth.port;
-	_Setting.socket = oth.socket;
-	_Setting.flog = oth.flog;
+	_setting.host = std::move(oth.host);
+	_setting.id = std::move(oth.id);
+	_setting.passwd = std::move(oth.passwd);
+	_setting.port = oth.port;
+	_setting.socket = oth.socket;
+	_setting.flog = oth.flog;
 
 }
 

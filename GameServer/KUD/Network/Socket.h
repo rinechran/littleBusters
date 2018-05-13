@@ -4,14 +4,21 @@
 #pragma comment(lib, "Ws2_32.lib")
 
 namespace KUD {
-	union _socket{
-		
+	struct impleSocket{
+		SOCKET socket;
+	};
+	enum class SOCKET_TYPE {
+		TCP,
+		UDP
 	};
 	class Socket
 	{
+
 	public:
-		Socket() {}
+		Socket(SOCKET_TYPE ) {}
 		virtual ~Socket() {}
+	private:
+		impleSocket _socket;
 	};
 }
 

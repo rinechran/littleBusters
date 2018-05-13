@@ -47,5 +47,11 @@
     <ClInclude Include="KUD\Debug\Debug.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="KUD\Network\LittleBusters.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="KUD\Network\Utility.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
