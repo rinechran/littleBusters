@@ -7,18 +7,28 @@ namespace KUD {
 	struct impleSocket{
 		SOCKET socket;
 	};
-	enum class SOCKET_TYPE {
+	enum class TRANSPORT_PROTOCAL {
 		TCP,
-		UDP
+		UDP,
+	};
+	enum class INTERNET_PROTOCAL {
+		ipv4,
+		ipv6
 	};
 	class Socket
 	{
 
 	public:
-		Socket(SOCKET_TYPE ) {}
+		Socket(TRANSPORT_PROTOCAL ) {}
 		virtual ~Socket() {}
 	private:
+		/*
+		Not implement
+		bool CreateSocket{
+		
+		}
 		impleSocket _socket;
+		*/
 	};
 }
 
