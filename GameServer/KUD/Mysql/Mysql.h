@@ -40,7 +40,7 @@ namespace KUD {
 
 
 
-		struct ConnetSetting
+		struct ConnectSetting
 		{
 			std::string host;
 			std::string id;
@@ -62,14 +62,14 @@ namespace KUD {
 		class Mysql {
 			public:
 				Mysql();
-				ErrorCode connect(ConnetSetting setting);
+				ErrorCode connect(ConnectSetting setting);
 				ErrorCode mysql_query(std::string &query);
 				virtual ~Mysql();
 		private:
-			void ConnectMove(ConnetSetting &&oth);
+			void ConnectMove(ConnectSetting &&oth);
 			::MYSQL * _connector;
 			bool _isSetting;
-			ConnetSetting _setting;
+			ConnectSetting _setting;
 		};
 
 		/*
