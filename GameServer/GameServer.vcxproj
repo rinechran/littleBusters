@@ -145,6 +145,7 @@
     <ClCompile Include="KUD\Network\Socket.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="KUD\DebugHelper\Debug.h" />
     <ClInclude Include="KUD\Debug\Debug.h" />
     <ClInclude Include="KUD\Mysql\Mysql.h" />
     <ClInclude Include="KUD\Network\EndPoint.h" />
