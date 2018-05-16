@@ -11,8 +11,8 @@ namespace KUD {
 	//winsocket;
 
 	enum class TRANSPORT_PROTOCAL {
-		TCP,
-		UDP,
+		TCP = SOCK_STREAM,
+		UDP = SOCK_DGRAM,
 	};
 	enum class INTERNET_PROTOCAL {
 		ipv4,
@@ -33,6 +33,16 @@ namespace KUD {
 		}
 		void acceptor(EndPoint endpoint) {
 			_endPoint = endpoint;
+		}
+
+		//server accept : bind -> listen -> accept
+		void accept() {
+			//WSAAccept(_socket.socket)
+		}
+
+		//clinet : coennects
+		void connect() {
+
 		}
 		virtual ~Socket() {}
 	private:
