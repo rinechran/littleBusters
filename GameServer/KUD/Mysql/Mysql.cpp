@@ -25,7 +25,7 @@ KUD::MYSQL::Mysql::Mysql() : _isSetting(false) {
 	}
 }
 
-KUD::MYSQL::ErrorCode KUD::MYSQL::Mysql::connect(ConnetSetting setting) {
+KUD::MYSQL::ErrorCode KUD::MYSQL::Mysql::connect(ConnectSetting setting) {
 	_setting = setting;
 	ConnectMove(std::move(setting));
 	if (!_isSetting) {
@@ -56,7 +56,7 @@ KUD::MYSQL::Mysql::~Mysql() {
 	}
 }
 
-void KUD::MYSQL::Mysql::ConnectMove(ConnetSetting && oth) {
+void KUD::MYSQL::Mysql::ConnectMove(ConnectSetting && oth) {
 	_setting.host = std::move(oth.host);
 	_setting.id = std::move(oth.id);
 	_setting.passwd = std::move(oth.passwd);
