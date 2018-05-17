@@ -35,8 +35,10 @@ namespace KUD {
 			_endPoint = endpoint;
 		}
 
+		//Server function
 		//server accept : bind -> listen -> accept
 		void accept() {
+
 			//WSAAccept(_socket.socket)
 		}
 
