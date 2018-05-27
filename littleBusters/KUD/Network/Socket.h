@@ -59,6 +59,14 @@ namespace KUD {
 		INTERNET_PROTOCAL _internetProtocal;
 		TRANSPORT_PROTOCAL _transportProtocal;
 	};
+
+	class acceptor {
+
+	};
+
+	class Conector {
+		
+	};
 	 
 }
 
