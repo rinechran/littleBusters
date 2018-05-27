@@ -1,7 +1,7 @@
 #pragma once
-#include "Utility/Utility.h"
 #include <WinSock2.h>
 #include "EndPoint.h"
+#include "Utility.h"
 #pragma comment(lib, "Ws2_32.lib")
 
 
@@ -31,11 +31,11 @@ namespace KUD {
 			_internetProtocal = ipv;
 			_transportProtocal = transport;
 		}
-		void acceptor(EndPoint endpoint) {
-			_endPoint = endpoint;
+		void acceptor(EndPoint &endpoint) {
+			_endPoint = &endpoint;
 		}
 
-		//Server function
+		//Server function	
 		//server accept : bind -> listen -> accept
 		void accept() {
 
@@ -55,7 +55,7 @@ namespace KUD {
 		}
 		*/
 		impleSocket _socket;
-		EndPoint _endPoint;
+		EndPoint * _endPoint;
 		INTERNET_PROTOCAL _internetProtocal;
 		TRANSPORT_PROTOCAL _transportProtocal;
 	};
