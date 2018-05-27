@@ -24,11 +24,11 @@
     <ClCompile Include="KUD\Network\Socket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="KUD\Utility\ThreadLock\SpinLock.h">
-      <Filter>Header Files</Filter>
-    </ClCompile>
     <ClCompile Include="network_main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KUD\Utility\ThreadLock\Lock.h">
+      <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
