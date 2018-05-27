@@ -36,7 +36,7 @@ namespace NUD {
 			lock();
 		}
 		virtual void lock() override {
-			while (InterlockedCompareExchange(_Locker, 1, 0) == 0) {
+			while (InterlockedCompareExchange(_Locker, 1, 0) != 0) {
 			}
 		}
 		virtual void unLock() override {
@@ -57,7 +57,7 @@ namespace NUD {
 			this->_Locker = &object;
 		}
 		virtual void lock() override {
-			while (InterlockedCompareExchange(_Locker, 1, 0) == 0) {
+			while (InterlockedCompareExchange(_Locker, 1, 0) != 0) {
 			}
 		}
 		virtual void unLock() override {
