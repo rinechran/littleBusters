@@ -6,10 +6,9 @@
 
 | Windows       | Environment   | Bulid Test|
 | :------------:|:-------------:| :-----:   |
-| visual studio 2017| 32Bit     |           |
-| visual studio 2017| 64Bit    |           |
+| visual studio 2017| 32Bit     | [![Build status](https://ci.appveyor.com/api/projects/status/i720lqv5vnr1f1j6?svg=true)](https://ci.appveyor.com/project/rinechran/littlebusters) |
+| visual studio 2017| 64Bit    | [![Build status](https://ci.appveyor.com/api/projects/status/i720lqv5vnr1f1j6?svg=true)](https://ci.appveyor.com/project/rinechran/littlebusters) |
 
-* I will Build Test https://www.appveyor.com *
 
 ### To be implemented
 * Database Connector
