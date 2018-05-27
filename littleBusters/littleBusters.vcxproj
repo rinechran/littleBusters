@@ -23,6 +23,7 @@
     <ProjectGuid>{7D53D4B8-F55C-40BC-BE77-F77CA95CD840}</ProjectGuid>
     <RootNamespace>GameServer</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <ProjectName>littleBusters</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -141,17 +142,19 @@
   <ItemGroup>
     <ClCompile Include="KUD\Mysql\Mysql.cpp" />
     <ClCompile Include="KUD\Network\EndPoint.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="KUD\Network\Socket.cpp" />
+    <ClCompile Include="KUD\Utility\ThreadLock\SpinLock.h" />
+    <ClCompile Include="network_main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="KUD\DebugHelper\Debug.h" />
     <ClInclude Include="KUD\Debug\Debug.h" />
     <ClInclude Include="KUD\Mysql\Mysql.h" />
     <ClInclude Include="KUD\Network\EndPoint.h" />
     <ClInclude Include="KUD\Network\LittleBusters.h" />
     <ClInclude Include="KUD\Network\Utility.h" />
-    <ClInclude Include="KUD\Network\Utility\Patton\Singleton.hpp" />
-    <ClInclude Include="KUD\Network\Utility\Utility.h" />
+    <ClInclude Include="KUD\Utility\Patton\Singleton.hpp" />
+    <ClInclude Include="KUD\Utility\Utility.h" />
     <ClInclude Include="KUD\Network\Socket.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
