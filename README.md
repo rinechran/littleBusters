@@ -2,7 +2,7 @@
 
 ![littleBusters](https://github.com/rinechran/littleBusters/blob/master/img/kud_littlebusters.jpg)
 
-## This is Windows Game Server Framework
+## This is Network Framework
 
 | Windows       | Environment   | Bulid Test|
 | :------------:|:-------------:| :-----:   |
