@@ -6,6 +6,7 @@
 
 
 
+//https://github.com/pauldotknopf/WindowsSDK7-Samples/tree/master/netds/winsock/iocp
 
 namespace KUD {
 	//winsocket;
@@ -20,8 +21,19 @@ namespace KUD {
 	};
 
 	struct impleSocket{
-		SOCKET socket;
+	private:
+		SOCKET _socket;
+	public:
+		impleSocket() {
+			_socket = INVALID_SOCKET;
+		}
+		operator SOCKET&() {
+			return _socket;
+		}
+		
 	};
+
+	// socket 은 ipv4,ipv6 엔드포인트와 묶어주는 작업을 추가한다
 
 	class Socket
 	{
@@ -29,23 +41,9 @@ namespace KUD {
 	public:
 		Socket(INTERNET_PROTOCAL ipv, TRANSPORT_PROTOCAL transport) {
 			_internetProtocal = ipv;
-			_transportProtocal = transport;
-		}
-		void acceptor(EndPoint &endpoint) {
-			_endPoint = &endpoint;
+			_transportProtocal = transport;			
 		}
 
-		//Server function	
-		//server accept : bind -> listen -> accept
-		void accept() {
-
-			//WSAAccept(_socket.socket)
-		}
-
-		//clinet : coennects
-		void connect() {
-
-		}
 		virtual ~Socket() {}
 	private:
 		/*
@@ -60,11 +58,28 @@ namespace KUD {
 		TRANSPORT_PROTOCAL _transportProtocal;
 	};
 
-	class acceptor {
+	class Acceptor {
+	public:
+		Acceptor(Socket,EndPoint) {
 
+		}
+		//Server function	
+		//server accept : bind -> listen -> accept
+		void accept() {
+
+			//WSAAccept(_socket.socket)
+		}
 	};
 
 	class Conector {
+	public:
+		Conector() {
+
+		}
+		//clinet : coennects
+		void connect() {
+
+		}
 		
 	};
 	 

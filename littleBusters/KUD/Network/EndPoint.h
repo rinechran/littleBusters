@@ -23,9 +23,9 @@ namespace KUD {
 		EndPoint() = delete;
 		//endpoint
 		EndPoint(std::string ip,u_char port) {
-//			_addrinfo.info.sin_addr.s_addr = inet_addr(ip.c_str());
-			//_addrinfo.info.sin_family; v4 v6
-//			_addrinfo.info.sin_port = htons(port);
+			_addrinfo.info.sin_addr.s_addr = inet_addr(ip.c_str());
+			//_addrinfo.info.sin_family; v4
+			_addrinfo.info.sin_port = htons(port);
 		
 		}
 
