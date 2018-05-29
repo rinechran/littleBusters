@@ -30,6 +30,9 @@
     <ClCompile Include="KUD\Utility\ThreadLock\Lock.h">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="KUD\Network\Acceptor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="KUD\DebugHelper\Debug.h">

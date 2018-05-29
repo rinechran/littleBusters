@@ -141,6 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="KUD\Mysql\Mysql.cpp" />
+    <ClCompile Include="KUD\Network\Acceptor.cpp" />
     <ClCompile Include="KUD\Network\EndPoint.cpp" />
     <ClCompile Include="KUD\Network\Socket.cpp" />
     <ClCompile Include="KUD\Utility\ThreadLock\Lock.h" />
