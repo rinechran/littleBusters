@@ -3,7 +3,6 @@
 #include <WinSock2.h>
 #include <string>
 #include "Socket.h"
-#include "Acceptor.h"
 
 //http://www.winsocketdotnetworkprogramming.com/winsock2programming/winsock2advancediomethod5f.html
 
@@ -22,8 +21,10 @@ namespace KUD {
 		// ipv , 
 		EndPoint() = delete;
 		//endpoint
-		template <class T>
-		EndPoint(T othIp, u_char othPort);
+		EndPoint(std::string othIp, u_char othPort) {
+			ip = othIp;
+			port = othPort;
+		}
 		EndPoint(const EndPoint& oth);
 
 		EndPoint& operator=(const EndPoint& oth) {
@@ -42,12 +43,7 @@ namespace KUD {
 	};
 	
 
-	//endpoint
 
-	template<class T>
-	EndPoint::EndPoint(T othIp, u_char othPort) {
-		ip = std::forward<T>(othIp);
-		port = _othPort;
-	}
+	
 
 }

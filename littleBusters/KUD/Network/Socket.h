@@ -2,16 +2,15 @@
 #include <WinSock2.h>
 #include "EndPoint.h"
 #include "Utility.h"
-#include "Acceptor.h"
 #pragma comment(lib, "Ws2_32.lib")
-
 
 
 //https://github.com/pauldotknopf/WindowsSDK7-Samples/tree/master/netds/winsock/iocp
 
 namespace KUD {
 	//winsocket;
-	
+	class Acceptor;
+
 	enum  TRANSPORT_PROTOCAL {
 		TCP = SOCK_STREAM,
 		UDP = SOCK_DGRAM,
@@ -58,11 +57,11 @@ namespace KUD {
 
 
 		}
-
 		
+		friend class Acceptor;
 
 		impleSocket _socket;
-		EndPoint * _endPoint;
+		class EndPoint * _endPoint;
 		INTERNET_PROTOCAL _internetProtocal;
 		TRANSPORT_PROTOCAL _transportProtocal;
 	};

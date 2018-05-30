@@ -1,7 +1,7 @@
 #include "Acceptor.h"
+#include "Socket.h"
 
-KUD::Acceptor::Acceptor(KUD::Socket * othSocket, KUD::EndPoint & othEndpoint) {
-
+KUD::Acceptor::Acceptor(Socket & othSocket, EndPoint & othEndpoint) :_socket(othSocket){
 
 }
 
