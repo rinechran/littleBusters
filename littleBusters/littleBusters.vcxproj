@@ -147,6 +147,7 @@
     <ClCompile Include="network_main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="KUD\DebugHelper\DebugHelper.h" />
     <ClInclude Include="KUD\DebugHelper\Debug.h" />
     <ClInclude Include="KUD\Debug\Debug.h" />
     <ClInclude Include="KUD\Mysql\Mysql.h" />

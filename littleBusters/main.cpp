@@ -2,7 +2,7 @@
 #include "KUD/Mysql/Mysql.h"
 
 int main() {
-	KUD::MYSQL::Mysql mysql;
+	//KUD::MYSQL::Mysql mysql;
 	/*
 			std::string host;
 			std::string id;
