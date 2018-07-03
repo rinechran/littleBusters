@@ -1,14 +1,26 @@
 #include "Acceptor.h"
 #include "Socket.h"
 
-KUD::Acceptor::Acceptor(Socket & othSocket, EndPoint & othEndpoint) :_socket(othSocket){
+KUD::Acceptor::Acceptor(Socket & othSocket, EndPoint & othEndpoint) :_socket(othSocket),endpoint(othEndpoint){
 
 }
 
 //Server function	
-//server accept : bind -> listen -> accept
+//server run : bind -> listen -> accept
 
-void KUD::Acceptor::accept() {
+void KUD::Acceptor::run() {
+
+
+	if (this->_socket.CreateSocket())
+		throw std::runtime_error("Socket Invalid");
+
+	
+
+	/*
+	
+
+	*/
+	
 }
 
 //clinet : coennects

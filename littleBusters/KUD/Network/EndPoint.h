@@ -20,7 +20,9 @@ namespace KUD {
 	public:
 		// ipv , 
 		EndPoint() = delete;
+
 		//endpoint
+
 		EndPoint(std::string othIp, u_char othPort) {
 			ip = othIp;
 			port = othPort;

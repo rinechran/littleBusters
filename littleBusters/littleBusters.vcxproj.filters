@@ -62,5 +62,8 @@
     <ClInclude Include="KUD\Network\Socket.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="KUD\Network\Acceptor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

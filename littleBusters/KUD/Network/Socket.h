@@ -1,10 +1,11 @@
 #pragma once
+
 #include <WinSock2.h>
 #include "EndPoint.h"
 #include "Utility.h"
 #pragma comment(lib, "Ws2_32.lib")
 
-#define _WINSOCK_DEPRECATED_NO_WARNINGS 0
+
 
 //https://github.com/pauldotknopf/WindowsSDK7-Samples/tree/master/netds/winsock/iocp
 
@@ -53,14 +54,19 @@ namespace KUD {
 
 	private:
 		bool CreateSocket() {
-			//_socket = WSASocket(_internetProtocal, _transportProtocal, 
-			//	0, nullptr, 0, WSA_FLAG_OVERLAPPED);
-
+			_socket = WSASocketW(_internetProtocal, _transportProtocal, 0, nullptr, 0, WSA_FLAG_OVERLAPPED);
+			
+			if (_socket == INVALID_SOCKET) 
+				return false;
+			return true;
+		}
+		bool isSocket() {
+			return _socket;
 		}
 		
 		friend class Acceptor;
 
-		SOCKADDR_IN a;
+		SOCKADDR_IN _socketaddr_in;
 		impleSocket _socket;
 		class EndPoint * _endPoint;
 		INTERNET_PROTOCAL _internetProtocal;
