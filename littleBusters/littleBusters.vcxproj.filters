@@ -44,25 +44,25 @@
     <ClInclude Include="KUD\Mysql\Mysql.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="KUD\Network\EndPoint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="KUD\Network\LittleBusters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="KUD\Network\Utility.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="KUD\Utility\Patton\Singleton.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="KUD\Utility\Utility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="KUD\Network\Socket.h">
+    <ClInclude Include="KUD\Network\Acceptor.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="KUD\Network\Acceptor.h">
+    <ClInclude Include="KUD\Network\EndPoint.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KUD\Network\LittleBusters.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KUD\Network\Socket.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KUD\Network\Utility.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

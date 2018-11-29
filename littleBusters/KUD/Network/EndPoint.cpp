@@ -1,10 +1,10 @@
-#include "EndPoint.h"
+#include "EndPoint.hpp"
 
-KUD::_addrinfo::_addrinfo() {
+KUD::Addrinfo::Addrinfo() {
 	memset(&info, 0, sizeof(addrinfo));
 }
 
 KUD::EndPoint::EndPoint(const EndPoint & oth) {
-	ip = oth.ip;
-	port = oth.port;
+	mIp = oth.mIp;
+	mPort = oth.mPort;
 }
