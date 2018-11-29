@@ -24,10 +24,13 @@
     <ClCompile Include="KUD\Network\Socket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="KUD\Utility\ThreadLock\SpinLock.h">
+    <ClCompile Include="network_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KUD\Utility\ThreadLock\Lock.h">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="network_main.cpp">
+    <ClCompile Include="KUD\Network\Acceptor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,22 +41,25 @@
     <ClInclude Include="KUD\Mysql\Mysql.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="KUD\Network\EndPoint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="KUD\Network\LittleBusters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="KUD\Network\Utility.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="KUD\Utility\Patton\Singleton.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="KUD\Utility\Utility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="KUD\Network\Socket.h">
+    <ClInclude Include="KUD\Network\Acceptor.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KUD\Network\EndPoint.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KUD\Network\LittleBusters.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KUD\Network\Socket.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KUD\Network\Utility.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="KUD\DebugHelper\DebugHelper.h">
