@@ -22,7 +22,7 @@ namespace KUD {
 			return false;
 		}
 		bool bind(){
-			::bind(this->_socket,)
+			//::bind(this->_socket,)
 			return false;
 
 		}
