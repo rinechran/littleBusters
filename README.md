@@ -14,11 +14,6 @@
 * NetWork(TCP/UDP)
 * DebugHelper
 
-### Database Connector
-* Mysql, MariaDB
-* Sqlite
-* Radis
-
 ### NetWork
 * Window IOCP
 
@@ -27,10 +22,6 @@
 * https://www.gamasutra.com/view/feature/131638/dead_reckoning_latency_hiding_for_.php
 * http://www.gamasutra.com/view/feature/131503/1500_archers_on_a_288_network_.php
 * https://www.gamasutra.com/blogs/NeemaTeymory/20160906/280377/Why_Making_Multiplayer_Games_is_Hard_Lag_Compensating_Weapons_in_MechWarrior_Online.php
-
-### Using Libary
-* Mysql connector
-* radis connector
 
 
 MIT License

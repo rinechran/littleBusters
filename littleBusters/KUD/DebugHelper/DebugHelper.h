@@ -19,42 +19,5 @@ namespace KUD {
 #endif // DEBUG
 		}
 
-		class ImpleUnhanderFiter {
-		public:
-			ImpleUnhanderFiter() :fn(nullptr){}
-
-			void operator()() {
-				fn();
-			}
-
-			template <typename T>
-			bool operator==(T &&oth) {
-				return fn == oth;
-			}
-			template <typename T>
-			bool operator!=(T &&oth) {
-				return fn != oth;
-			}
-			
-
-			void operator=(std::function<void()> othFn) {
-				this->fn.swap(othFn);
-			}
-
-		private:
-			std::function<void()> fn;
-
-		} ImpleUnhanderFiters;
-
-		LONG __stdcall unhanderExceptFiter(PEXCEPTION_POINTERS exceptionPointer) {
-			ImpleUnhanderFiters();
-			return 0;
-		}
-		void SetUnhanderExcept() {
-			SetUnhandledExceptionFilter(unhanderExceptFiter);
-		}
-
-
-
 	}
 }

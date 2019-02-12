@@ -54,7 +54,7 @@ namespace KUD {
 
 	private:
 		bool CreateSocket() {
-			_socket = WSASocketW(_internetProtocal, _transportProtocal, 0, nullptr, 0, WSA_FLAG_OVERLAPPED);
+			_socket = WSASocket(_internetProtocal, _transportProtocal, 0, nullptr, 0, WSA_FLAG_OVERLAPPED);
 			
 			if (_socket == INVALID_SOCKET) 
 				return false;

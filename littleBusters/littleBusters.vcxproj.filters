@@ -15,16 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="KUD\Mysql\Mysql.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="KUD\Network\EndPoint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="KUD\Network\Socket.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="network_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="KUD\Utility\ThreadLock\Lock.h">
@@ -33,12 +27,12 @@
     <ClCompile Include="KUD\Network\Acceptor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="KUD\Debug\Debug.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="KUD\Mysql\Mysql.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="KUD\Utility\Patton\Singleton.hpp">

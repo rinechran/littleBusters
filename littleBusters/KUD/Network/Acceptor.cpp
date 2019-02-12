@@ -20,13 +20,6 @@ void KUD::Acceptor::run() {
 
 	if (!this->listen())
 		throw std::runtime_error("listen Error");
-
-	
-
-	/*
-	
-	   
-	*/
 	
 }
 

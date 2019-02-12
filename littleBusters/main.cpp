@@ -1,17 +1,14 @@
 #include <iostream>
-#include "KUD/Mysql/Mysql.h"
+#include <string>
+#include "KUD/Network/LittleBusters.hpp"
 
 int main() {
-	//KUD::MYSQL::Mysql mysql;
-	/*
-			std::string host;
-			std::string id;
-			std::string passwd;
-			std::string database;
-			ImPort port;
-			ImSocket socket;
-			ImFlog flog;
-	*/
+	KUD::Socket socket(KUD::INTERNET_PROTOCAL::ipv4, KUD::TRANSPORT_PROTOCAL::TCP);
+	KUD::EndPoint endPoint("127.0.0.1u", 8080u);
+	KUD::Acceptor acceptor(socket,endPoint);
+	acceptor.accept();
+
+
 
 
 }
